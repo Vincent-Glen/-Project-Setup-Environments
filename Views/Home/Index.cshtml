@@ -1,0 +1,234 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Rescue a pet today!</h1>
+    <p>Hello ASP.NET Core!</p>
+</div>
+<br>
+
+<!DOCTYPE html>
+
+<html>
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+</style>
+
+<div class="slideshow-container">
+
+<div class="mySlides" class="fade">
+  <img src="https://www.barkesvet.co.nz/wp-content/uploads/2019/10/guinea-pig-care.jpg" style="width:100%">
+</div>
+
+<div class="mySlides" class="fade">
+  <img src="https://www.k9ofmine.com/wp-content/uploads/2019/08/Puppy-and-Adult-Dog-Playing-800x533.jpg" style="width:100%">
+</div>
+
+<div class="mySlides" class="fade">
+  <img src="https://www.comfortzone.com/-/media/Project/OneWeb/ComfortZone/Images/Blog/cats-playing-or-fighting.jpg" style="width:100%">
+</div>
+
+<div class="mySlides" class="fade">
+  <img src="https://ruffinwranglers.com/wp-content/uploads/playing-puppies-790638_1920.jpg" style="width:100%">
+</div>
+
+<div class="mySlides" class="fade">
+  <img src="https://i.natgeofe.com/k/bbe3c9e3-f7b3-4b9c-a53f-2afbfc72ef99/Domestic_RABBITS_KIDS_0123.jpg?w=636&h=424" style="width:100%">
+</div>
+
+<div class="mySlides" class="fade">
+  <img src="https://i2-prod.birminghammail.co.uk/incoming/article7217901.ece/ALTERNATES/s1200b/JS38418857.jpg" style="width:100%">
+</div>
+
+<div class="mySlides" class="fade">
+  <img src="https://www.treehugger.com/thmb/cCSCSPYYd-ge_xBjn-TDkOCI2AI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/13-359037a24c844b8282c481fae329e2b1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides" class="fade">
+  <img src="https://ruffinwranglers.com/wp-content/uploads/playing-puppies-790638_1920.jpg" style="width:100%">
+</div>
+
+<div class="mySlides" class="fade">
+  <img src="https://www.thesprucepets.com/thmb/tBAyWq8UAGbyyuL1WUX_XSwAiuE=/3696x0/filters:no_upscale():strip_icc()/close-up-of-budgerigars-perching-on-branch-909976322-5b4bf18746e0fb005bc62377.jpg" style="width:100%">
+</div>
+
+<div class="mySlides" class="fade">
+  <img src="https://www.thesprucepets.com/thmb/06PRlw-hsQ5b3WDF4zw4nQulHaY=/1500x0/filters:no_upscale():strip_icc()/turtle-species-great-pets-4788330-hero-7883bb247ecb4d30910d08f717198d76.jpg" style="width:100%">
+</div>
+
+<div class="mySlides" class="fade">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Bartagame_fcm.jpg" style="width:100%">
+</div>
+
+<div class="mySlides" class="fade">
+  <img src="https://static.israel21c.org/www/uploads/2014/04/cat2see1.jpg" style="width:100%">
+</div>
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+<br>
+<br>
+
+<head>
+<style>
+div.gallery {
+  margin: 20px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 200px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+
+<h2 class="text-center">Animals at the shelter</h2>
+<div class="gallery" class="text-center">
+   <img src="https://www.rspcansw.org.au/wp-content/uploads/2016/08/gp2-700x587.jpg" alt="Coco" width="600" height="400">
+  <div class="desc">Coco is a female guinea pig
+around 2 years old</div>
+</div>
+
+<div class="gallery" class="text-center">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Blue_male_budgie.jpg" alt="Lucy" width="600" height="400">
+  <div class="desc">Lucas is a male budgie around 8 months old</div>
+</div>
+
+<div class="gallery" class="text-center">
+   <img src="http://catoftheday.com/archive/2012/November/10b.jpg" alt="Whiskers" width="600" height="400">
+  <div class="desc">Whiskers is a male cat around 2 years old</div>
+</div>
+
+<div class="gallery" class="text-center">
+   <img src="https://i.guim.co.uk/img/media/bb8b939fa9d487c5d6450ae45f39f2d179e0b292/155_289_3410_2046/master/3410.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=bae1da2781600aeeb202748a9184a588" alt="Hopper" width="600" height="400">
+  <div class="desc">Hopper is a male rabbit around 1 year old</div>
+</div>
+
+<div class="gallery" class="text-center">
+   <img src="https://static01.nyt.com/images/2022/08/25/science/25DogDementia-08/25DogDementia-08-mobileMasterAt3x.jpg" alt="Gus" width="600" height="400">
+  <div class="desc">Gus is male dog around 8 years old</div>
+</div>
+
+<div class="gallery" class="text-center">
+   <img src="https://www.k-state.edu/media/images/aug22/Rabbit-sm.jpg" alt="Star" width="600" height="400">
+  <div class="desc">Star is a female rabbit around 2 months old</div>
+</div>
+
+<div class="gallery" class="text-center">
+   <img src="https://images.unsplash.com/photo-1586164383881-d01525b539d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z2luZ2VyJTIwY2F0fGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="Lucky" width="600" height="400">
+  <div class="desc">Lucky is a female cat around 4 years old</div>
+</div>
+
+<div class="gallery" class="text-center">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Rosy-faced_lovebird_%28Agapornis_roseicollis_roseicollis%29.jpg" alt="Charlie" width="600" height="400">
+  <div class="desc">Charlie is a male lovebird around 2 month</div>
+</div>
+
+<div class="gallery" class="text-center">
+   <img src="https://cdn11.bigcommerce.com/s-s4f5l4ll/images/stencil/1280w/products/555/1935/baby_eastern_painted_turtle_750_6__21469.1415402388.jpg" alt="Bubbles" width="600" height="400">
+  <div class="desc">Bubbles is a female turtle around 1 month</div>
+</div>
+
+<div class="gallery" class="text-center">
+   <img src="https://www.stylist.co.uk/images/app/uploads/2019/01/30103709/justin-veenema-147056-unsplash-934x934.jpg?w=1200&h=1&fit=max&auto=format%2Ccompress" alt="Miles" width="600" height="400">
+  <div class="desc">Miles is a male dog around 1 years old</div>
+</div>
+</html>
+
+<br>
+<br>
+<br>
+
+<div class="text-center">
+    <br>
+    <br>
+    <br>
+    <h1>What is Pet Handler</h1>
+    <p>Pet Handler is a company that helps animals, we rescue animals in need. Animals that are neglected from their homes, animals living on the streets. 
+        We believe that animals who have raised to be domestic shouldnt be raised to be neglected. They should have love and support from their owners.
+        We created this company to find animals in need. Its hard to look at animals on the streets starving and begging for help. We always see people
+        walk past them not even giving them a second look. We see the mothers or the fathers of the animals struggling to protect their little babies or 
+        provding food to feed them. We see sick animals or even dying aniamls all over Auckland yet no one tried to help them. This we why we created this 
+        company. We provide safe homes for the aniamls. We treat them, feed them, bathe them until they either recover or we find them new homes. We create
+        safe enviroment for the animals until we find them safe and permanemt homes for them. If we find them in families we try to find homes who we take 
+        whole family because we try not to seperate them. We do this because we know animals dont have a voice, we try to be a voice for them.</p>
+</div
